@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Traffic Monitoring System | Lokas Wagih</title>
+<meta name="description" content="Smart Traffic Monitoring System: an AI and computer vision graduation project using YOLOv8, OpenCV and Deep SORT to detect and track vehicles and estimate road conditions. By Lokas Wagih.">
+<meta name="theme-color" content="#070B16">
+<meta property="og:title" content="Smart Traffic Monitoring System | Lokas Wagih">
+<meta property="og:description" content="AI-assisted road video analysis: vehicle detection, tracking and traffic condition estimation.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/traffic-vision-accident.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">L</span>Lokas Wagih</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects" aria-current="page">Projects</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a class="nav-cta" href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" class="container">
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>/</span><a href="index.html#projects">Projects</a><span>/</span>Smart Traffic Monitoring System
+</nav>
+
+<header class="page-hero">
+  <span class="cat">AI · COMPUTER VISION · GRADUATION PROJECT</span>
+  <h1>Smart Traffic Monitoring System</h1>
+  <p class="lead">An AI-assisted system designed to analyze road video, detect and track vehicles, classify traffic conditions, and share road status to support smarter traffic management.</p>
+  <div class="pills">
+    <span class="pill">Python</span><span class="pill">YOLOv8</span><span class="pill">OpenCV</span><span class="pill">Deep SORT</span><span class="pill">Firebase</span><span class="pill">ESP32</span>
+  </div>
+</header>
+
+<div class="detail-grid">
+<div class="detail-main">
+
+  <section>
+    <h2>Project Overview</h2>
+    <p>The Smart Traffic Monitoring System explores how computer vision can help monitor traffic conditions from camera footage. Vehicle detections and tracking information can be used to estimate whether a road is clear, operating normally, or experiencing congestion. The system also includes road-status sharing for a connected mobile interface.</p>
+  </section>
+
+  <section>
+    <h2>Problem Statement</h2>
+    <p>Traffic conditions change throughout the day, and manual observation can make it difficult to consistently understand vehicle flow and identify unusual events. This project investigates an automated, video-based approach to traffic monitoring.</p>
+  </section>
+
+  <section>
+    <h2>Proposed Solution</h2>
+    <p>The system processes road video using a YOLO-based object detection pipeline and computer-vision techniques. Detected vehicles can be tracked across frames, traffic indicators can be analyzed to estimate road conditions, and road status can be shared with a connected application. ESP32 integration supports the traffic-light control component.</p>
+  </section>
+
+  <section>
+    <h2>Key Features</h2>
+    <div class="grid-2">
+      <article class="card feature-card"><div class="icon" aria-hidden="true">🚗</div><h4>Vehicle Detection</h4><ul><li>Detect relevant road users in camera footage.</li><li>Display bounding boxes around detected objects.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">🎯</div><h4>Vehicle Tracking</h4><ul><li>Track detected vehicles across video frames using the computer-vision pipeline.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">🚦</div><h4>Traffic Condition Classification</h4><ul><li>Classify road conditions into Clear, Normal, or Jamming.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">📈</div><h4>Traffic Analysis</h4><ul><li>Analyze detected vehicle activity to help estimate traffic conditions.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">📸</div><h4>Event Snapshots</h4><ul><li>Capture snapshots for selected road events, including wrong-way observations and other monitored events.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">☁️</div><h4>Road Status Sharing</h4><ul><li>Share traffic status through Firebase for use by the connected application.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">⏱️</div><h4>Adaptive Traffic-Light Control</h4><ul><li>Include the project's adaptive traffic-light timing concept and ESP32 integration.</li></ul></article>
+      <article class="card feature-card"><div class="icon" aria-hidden="true">📹</div><h4>Camera-Based Monitoring</h4><ul><li>Support video input from road cameras or prepared video footage used for demonstration and testing.</li></ul></article>
+    </div>
+    <p class="note">These features describe the project's design and demonstration setups. They are not claimed as deployed on a live public road.</p>
+  </section>
+
+  <section>
+    <h2>System Workflow</h2>
+    <ol class="flow">
+      <li><h4>Video Input</h4><p>Receive road footage from a camera or prepared video source.</p></li>
+      <li><h4>Object Detection</h4><p>Detect relevant vehicles using YOLOv8.</p></li>
+      <li><h4>Vehicle Tracking</h4><p>Track detections across frames using Deep SORT.</p></li>
+      <li><h4>Traffic Analysis</h4><p>Analyze vehicle activity and estimate the road's traffic condition.</p></li>
+      <li><h4>Status Sharing and Control</h4><p>Share the traffic status through Firebase and support the traffic-light control concept through ESP32 integration.</p></li>
+    </ol>
+  </section>
+
+  <section id="gallery">
+    <h2>Project Images</h2>
+    <p style="margin-bottom:20px">Screens from the Traffic Vision desktop interface, with its four monitoring modules: accident detection, traffic signals (signal timing from queue size), wrong parking, and wrong-way driving. Click any image to enlarge.</p>
+    <div class="gallery">
+      <figure class="shot">
+        <button type="button" data-lightbox="assets/traffic-vision-accident.png" data-caption="Traffic Vision: accident detection module with confidence settings, statistics and event log.">
+          <img src="assets/traffic-vision-accident.png" alt="Traffic Vision desktop app showing the accident detection module with a red bounding box and an ACCIDENT DETECTED banner on road video, plus statistics, confidence sliders and an event log" loading="lazy" width="1908" height="1128">
+        </button>
+        <figcaption><strong>Accident Detection</strong>Crashes and abnormal stops flagged on video, with adjustable confidence thresholds, snapshot saving and an event log.</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" data-lightbox="assets/traffic-vision-wrong-parking.png" data-caption="Traffic Vision: wrong parking module flagging vehicles that stay stopped too long.">
+          <img src="assets/traffic-vision-wrong-parking.png" alt="Traffic Vision desktop app showing the wrong parking module with red boxes on two stopped vehicles and a vehicle count overlay" loading="lazy" width="1908" height="1128">
+        </button>
+        <figcaption><strong>Wrong Parking</strong>Vehicles stopped for too long are flagged, using adjustable frame-count and movement thresholds.</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" data-lightbox="assets/traffic-vision-wrong-way.png" data-caption="Traffic Vision: wrong-way driving module with tracked vehicle IDs.">
+          <img src="assets/traffic-vision-wrong-way.png" alt="Traffic Vision desktop app showing the wrong-way driving module with tracked vehicle IDs and one vehicle marked WRONG WAY" loading="lazy" width="1908" height="1128">
+        </button>
+        <figcaption><strong>Wrong-Way Driving</strong>Tracked vehicles get IDs, and movement against the expected direction is marked.</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" data-lightbox="assets/smart-traffic-detection.jpg" data-caption="Example vehicle detection output: cars and a truck boxed and labeled on highway footage.">
+          <img src="assets/smart-traffic-detection.jpg" alt="Highway footage with labeled detection boxes around several cars and one truck" loading="lazy" width="544" height="543">
+        </button>
+        <figcaption><strong>Vehicle Detection Output</strong>Cars and a truck detected with bounding boxes and class labels on road footage.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technologies Used</h2>
+    <div class="tech-grid">
+      <article class="card"><h4>Python</h4><p>Core programming language for the computer-vision workflow.</p></article>
+      <article class="card"><h4>YOLOv8</h4><p>Vehicle and object detection.</p></article>
+      <article class="card"><h4>OpenCV</h4><p>Video processing and image handling.</p></article>
+      <article class="card"><h4>Deep SORT</h4><p>Vehicle tracking across frames.</p></article>
+      <article class="card"><h4>Firebase</h4><p>Road-status data sharing.</p></article>
+      <article class="card"><h4>ESP32</h4><p>Hardware integration for the traffic-light control component.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>My Role</h2>
+    <p>Team project focused on AI-based traffic monitoring. My work relates to the computer-vision and traffic-analysis implementation described here. The project also includes hardware integration and connected road-status sharing.</p>
+  </section>
+
+</div>
+
+<aside class="sidebar" aria-label="Project summary">
+  <div class="card">
+    <h3>Project Summary</h3>
+    <dl>
+      <div><dt>Project domain</dt><dd>AI &amp; Computer Vision</dd></div>
+      <div><dt>Main language</dt><dd>Python</dd></div>
+      <div><dt>Object detection</dt><dd>YOLOv8</dd></div>
+      <div><dt>Tracking</dt><dd>Deep SORT</dd></div>
+      <div><dt>Integration</dt><dd>Firebase and ESP32</dd></div>
+      <div><dt>Project type</dt><dd>Graduation project</dd></div>
+    </dl>
+  </div>
+  <a class="btn btn-primary" href="mailto:lokas.wagih@gmail.com?subject=Smart%20Traffic%20Monitoring%20System">Ask About This Project</a>
+  <a class="btn btn-ghost" href="index.html#projects">← Back to All Projects</a>
+</aside>
+</div>
+
+</main>
+
+<footer style="margin-top:40px">
+  <div class="container foot">
+    <span>© <span data-year>2026</span> Lokas Wagih</span>
+    <ul>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#main">Back to top ↑</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
